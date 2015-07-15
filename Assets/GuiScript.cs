@@ -2,11 +2,12 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class ScoreScript : MonoBehaviour
+public class GuiScript : MonoBehaviour
 {
 
     public Text ScoreText;
     public int Score;
+    public Text OxyLevel;
 
     void Start()
     {
@@ -32,5 +33,10 @@ public class ScoreScript : MonoBehaviour
         if (Score < 0) Score = 0;
         Debug.Log("new score is " + Score);
         UpdateScore();
+    }
+
+    public void UpdateOxygenLevel(int oxy)
+    {
+        OxyLevel.text = string.Format("{0:000}", oxy);
     }
 }

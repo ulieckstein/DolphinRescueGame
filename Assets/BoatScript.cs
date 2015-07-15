@@ -52,7 +52,7 @@ public class BoatScript : MonoBehaviour {
         BumpHead(other.gameObject);
         if (other.gameObject.tag == "Player")
         {
-            _worldObject.GetComponent<ScoreScript>().SubtractScore(BumpHeadPunish);
+            _worldObject.GetComponent<GuiScript>().SubtractScore(BumpHeadPunish);
         }
     
     }
@@ -75,7 +75,7 @@ public class BoatScript : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             _sinkTime = Time.realtimeSinceStartup;
-            _worldObject.GetComponent<ScoreScript>().AddScore(SinkPoints);
+            _worldObject.GetComponent<GuiScript>().AddScore(SinkPoints);
             foreach (var col in gameObject.GetComponents<Collider2D>())
             {
                 col.enabled = false;    

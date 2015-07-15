@@ -9,14 +9,13 @@ public class DolphinScript : MonoBehaviour
     private float MoveX;
     
     private Animator _animator;
-    private GameObject _worldObject;
+    private GuiScript _guiScript;
 
     private int RescuePoints = 20;
     
     // Use this for initialization
 	void Start () {
-        _worldObject = GameObject.FindWithTag("GameController");
-        if (_worldObject == null) Debug.Log("cannot find world object");
+        _guiScript = GameObject.FindWithTag("GameController").GetComponent<GuiScript>();
         _animator = this.GetComponent<Animator>();
 	    MoveX = CaughtMoveSpeed;
 	}
@@ -47,7 +46,7 @@ public class DolphinScript : MonoBehaviour
             transform.position.y - 0.18f,
             transform.position.z);
         MoveX = SwimmingMoveSpeed;
-        _worldObject.GetComponent<ScoreScript>().AddScore(RescuePoints);
+        _guiScript.AddScore(RescuePoints);
     }
 
     public void Activate(float offset)

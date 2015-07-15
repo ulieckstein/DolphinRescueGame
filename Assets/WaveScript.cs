@@ -42,6 +42,7 @@ public class WaveScript : MonoBehaviour
         if (otherObject.tag == "Player")
         {
             otherObject.rigidbody2D.AddForce(new Vector2(0, -4));
+            otherObject.GetComponent<DiverScript>().Breathe();
         }
     }
 }
