@@ -7,6 +7,7 @@ public class GuiScript : MonoBehaviour
 
     public Text ScoreText;
     public int Score;
+    public Text GameOverText;
     
     public Image OxyBar;
     
@@ -19,6 +20,7 @@ public class GuiScript : MonoBehaviour
     {
         Score = 0;
         UpdateScore();
+        GameOverText.enabled = false;
     }
 
     void UpdateScore()
@@ -45,6 +47,7 @@ public class GuiScript : MonoBehaviour
     {
         OxyBar.fillAmount = oxy;
         ColorizeOxyBar(oxy);
+        if (oxy < 0) GameOverText.enabled = true;
     }
 
     public void ColorizeOxyBar(float oxy)
