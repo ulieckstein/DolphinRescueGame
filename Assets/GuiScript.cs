@@ -8,7 +8,14 @@ public class GuiScript : MonoBehaviour
     public Text ScoreText;
     public int Score;
     public Text OxyLevel;
-
+    
+    public Image OxyBar;
+    
+    private Color _oxyColorFull = new Color32(167, 202, 255, 255);
+    private Color _oxyColorMedium = new Color32(172, 167, 255, 255);
+    private Color _oxyColorLow = new Color32(209, 152, 212, 255);
+    private Color _oxyColorCritical = new Color32(225, 89, 126, 255);
+    
     void Start()
     {
         Score = 0;
@@ -35,8 +42,20 @@ public class GuiScript : MonoBehaviour
         UpdateScore();
     }
 
-    public void UpdateOxygenLevel(int oxy)
+    public void UpdateOxygenLevel(float oxy)
     {
-        OxyLevel.text = string.Format("{0:000}", oxy);
+        OxyLevel.text = string.Format("{0:000}", oxy * 100);
+        OxyBar.fillAmount = oxy;
+        ColorizeOxyBar(oxy);
+    }
+
+    public void ColorizeOxyBar(float oxy)
+    {
+        var newColor = _oxyColorCritical;
+        if (oxy > 0.15) newColor = _oxyColorLow;
+        if (oxy > 0.4) newColor = _oxyColorMedium;
+        if (oxy > 0.7) newColor = _oxyColorFull;
+        OxyBar.color = newColor;
+        Debug.Log("Colorized Oxy Bar: " + newColor);
     }
 }

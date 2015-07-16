@@ -7,8 +7,8 @@ public class DiverScript : MonoBehaviour {
     private Animator _animator;
     private Rigidbody2D rigidbody2D;
     
-    private int _breathVolume = 1000;
-    private int _oxygenLevel;
+    private float _oxyLostPerUpdate = 0.001f;
+    private float _oxygenLevel;
 
     private GuiScript _guiScript;
 
@@ -29,13 +29,13 @@ public class DiverScript : MonoBehaviour {
 	    _animator.SetBool("SwimUp", click);
 	    if (click) rigidbody2D.AddForce(new Vector2(0,2));
 
-	    _oxygenLevel -= 1;
+	    _oxygenLevel -= _oxyLostPerUpdate;
         _guiScript.UpdateOxygenLevel(_oxygenLevel);
 	}
 
     public void Breathe()
     {
-        _oxygenLevel = _breathVolume;
+        _oxygenLevel = 1f;
         _guiScript.UpdateOxygenLevel(_oxygenLevel);
     }
 
