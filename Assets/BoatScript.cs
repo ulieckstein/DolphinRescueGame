@@ -72,7 +72,7 @@ public class BoatScript : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && other.GetComponent<DiverScript>().IsAlive())
         {
             _sinkTime = Time.realtimeSinceStartup;
             _worldObject.GetComponent<GuiScript>().AddScore(SinkPoints);

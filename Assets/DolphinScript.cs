@@ -30,7 +30,7 @@ public class DolphinScript : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && other.GetComponent<DiverScript>().IsAlive())
         {
             other.GetComponent<Animator>().SetTrigger("Cut");
             StartCoroutine(FreeDolphin());
