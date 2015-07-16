@@ -54,6 +54,6 @@ public class GuiScript : MonoBehaviour
         if (oxy > 0.4) newColor = _oxyColorMedium;
         if (oxy > 0.7) newColor = _oxyColorFull;
         OxyBar.color = newColor;
-        Debug.Log("Colorized Oxy Bar: " + newColor);
+        //Debug.Log("Colorized Oxy Bar: " + newColor);
     }
 }

@@ -121,7 +121,7 @@ public class BoatScript : MonoBehaviour {
         Debug.Log("set active with x offset " + offset);
         _sinking = false;
         _sinkTime = 0;
-        transform.position = new Vector3(1.5f + offset, 0.3f, -2);
+        transform.position = new Vector3(offset, 0.3f, -2);
         transform.rotation = new Quaternion(0,0,0,0);
         //GetAnimator.SetBool("Sinking", false);
         gameObject.SetActive(true);

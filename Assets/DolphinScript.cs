@@ -52,7 +52,7 @@ public class DolphinScript : MonoBehaviour
     public void Activate(float offset)
     {
         //_animator.SetBool("IsFreed", false);
-        transform.position = new Vector3(1.5f + offset, 0.007f, 0);
+        transform.position = new Vector3(offset, 0.007f, 0);
         MoveX = CaughtMoveSpeed;
         gameObject.SetActive(true);
     }

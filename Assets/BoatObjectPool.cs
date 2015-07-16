@@ -1,11 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BoatObjectPool : MonoBehaviour
 {
     private GameObject[] _boats = null;
+    private const float MinBoatDistance = 0.3f;
 
     public int NumberOfBoatsInPool = 3;
+
 
     void Start()
     {
@@ -34,20 +39,22 @@ public class BoatObjectPool : MonoBehaviour
         {
             if (_boats[i].activeInHierarchy == false)
             {
-                Debug.Log(string.Format("Activate Boat {0}", i));
                 _boats[i].SetActive(true);
-                var offset = Random.Range(-1f, 1.5f);
-                _boats[i].GetComponent<BoatScript>().Activate(offset + i); 
+                var offset = PreventOverlappingBoats(Random.Range(2f, 3.5f));
+                _boats[i].GetComponent<BoatScript>().Activate(offset); 
+                Debug.Log(string.Format("Activate Boat {0} at offset {1}", i, offset));
                 return;
             }
         }
     }
 
-    IEnumerator DelayedActivation()
+    private float PreventOverlappingBoats(float offset)
     {
-        var waitSeconds = Random.Range(5.0f, 20.0f);
-        Debug.Log("waiting " + waitSeconds);
-        yield return new WaitForSeconds(waitSeconds);
-        ActivateBoat();
+        while (_boats.Any(b => Math.Abs(offset - b.transform.position.x) < MinBoatDistance))
+        {
+            Debug.Log("Delay Boat offset"); 
+            offset += 0.1f;
+        }
+        return offset;
     }
 }
