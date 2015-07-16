@@ -7,7 +7,6 @@ public class GuiScript : MonoBehaviour
 
     public Text ScoreText;
     public int Score;
-    public Text OxyLevel;
     
     public Image OxyBar;
     
@@ -44,7 +43,6 @@ public class GuiScript : MonoBehaviour
 
     public void UpdateOxygenLevel(float oxy)
     {
-        OxyLevel.text = string.Format("{0:000}", oxy * 100);
         OxyBar.fillAmount = oxy;
         ColorizeOxyBar(oxy);
     }
