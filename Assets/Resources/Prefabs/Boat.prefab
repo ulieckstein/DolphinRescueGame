@@ -147,7 +147,7 @@ MonoBehaviour:
   SinkPoints: 10
   BumpHeadPunish: 5
   BumpSound: {fileID: 8300000, guid: 25d1d570d1571784c90a6d25e42aa4ca, type: 3}
-  BreakSound: {fileID: 8300000, guid: 901fb0f7f87ed8b40863d4cf96bc8cb2, type: 3}
+  BreakSound: {fileID: 8300000, guid: ca68a28ef24177b4ebdf0100a903bce3, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

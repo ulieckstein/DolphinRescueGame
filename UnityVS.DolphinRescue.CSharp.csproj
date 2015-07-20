@@ -66,6 +66,7 @@
     <Compile Include="Assets\WaveScript.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Sounds\BoatFlip.txt" />
     <None Include="Assets\Sounds\Break.txt" />
     <None Include="Assets\Sounds\Breathe.txt" />
     <None Include="Assets\Sounds\Cut.txt" />
