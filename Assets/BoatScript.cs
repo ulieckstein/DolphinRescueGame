@@ -23,6 +23,10 @@ public class BoatScript : MonoBehaviour {
     public int SinkPoints = 10;
     public int BumpHeadPunish = 5;
 
+    public AudioClip BumpSound;
+    public AudioClip BreakSound;
+
+
     public Animator GetAnimator
     {
         get
@@ -67,6 +71,7 @@ public class BoatScript : MonoBehaviour {
         if (otherObject.tag == "Player")
         {
             otherObject.rigidbody2D.AddForce(new Vector2(0, -2));
+            audio.PlayOneShot(BumpSound);
         }
     }
 
@@ -81,6 +86,7 @@ public class BoatScript : MonoBehaviour {
                 col.enabled = false;    
             }
             _sinking = true;
+            audio.PlayOneShot(BreakSound);
             //GetAnimator.SetBool("Sinking", true);
         }
     }

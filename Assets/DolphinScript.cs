@@ -12,6 +12,8 @@ public class DolphinScript : MonoBehaviour
     private GuiScript _guiScript;
 
     private int RescuePoints = 20;
+
+    public AudioClip CutSound;
     
     // Use this for initialization
 	void Start () {
@@ -33,6 +35,7 @@ public class DolphinScript : MonoBehaviour
         if (other.gameObject.tag == "Player" && other.GetComponent<DiverScript>().IsAlive())
         {
             other.GetComponent<Animator>().SetTrigger("Cut");
+            audio.PlayOneShot(CutSound);
             StartCoroutine(FreeDolphin());
         }
     }
