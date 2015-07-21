@@ -70,6 +70,8 @@
     <None Include="Assets\Sounds\Break.txt" />
     <None Include="Assets\Sounds\Breathe.txt" />
     <None Include="Assets\Sounds\Cut.txt" />
+    <None Include="Assets\Sounds\HowTo.txt" />
+    <None Include="Assets\Sounds\LowOxy.txt" />
     <None Include="Assets\Sounds\SwimUp.txt" />
     <None Include="Assets\Sounds\SwimUp2.txt" />
   </ItemGroup>

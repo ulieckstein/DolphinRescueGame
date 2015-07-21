@@ -667,6 +667,14 @@ Prefab:
       propertyPath: m_Pivot.y
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 045f294d4eea03e4cae042836cb7a20b, type: 2}
+      propertyPath: LowOxySound
+      value: 
+      objectReference: {fileID: 8300000, guid: d774762424cdd1d44a65d7fca789042a, type: 3}
+    - target: {fileID: 11400000, guid: 045f294d4eea03e4cae042836cb7a20b, type: 2}
+      propertyPath: DrownSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e332c063777a1c45901cc98591629ad, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 045f294d4eea03e4cae042836cb7a20b, type: 2}
   m_RootGameObject: {fileID: 852384452}
@@ -885,6 +893,8 @@ MonoBehaviour:
   CriticalOxyFacialOverlay: {fileID: 1956998252}
   SwimUpSound: {fileID: 8300000, guid: e30fd22322421d3438e4c75c442a75c9, type: 3}
   BreatheSound: {fileID: 8300000, guid: 302945372794b244ea1a6d4e8b1cb1ad, type: 3}
+  LowOxySound: {fileID: 8300000, guid: d774762424cdd1d44a65d7fca789042a, type: 3}
+  DrownSound: {fileID: 8300000, guid: 8e332c063777a1c45901cc98591629ad, type: 3}
 --- !u!50 &852384457
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -1687,7 +1697,7 @@ AudioSource:
   m_GameObject: {fileID: 2026187772}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 2e70f425335c62a429d45dd982f3e512, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 886114f706d967d42a3f9d61729be446, type: 3}
   m_PlayOnAwake: 1
   m_Volume: .546999991
   m_Pitch: 1

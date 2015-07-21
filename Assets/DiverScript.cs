@@ -22,6 +22,8 @@ public class DiverScript : MonoBehaviour {
 
     public AudioClip SwimUpSound;
     public AudioClip BreatheSound;
+    public AudioClip LowOxySound;
+    public AudioClip DrownSound;
 
     // Use this for initialization
     void Start()
@@ -46,10 +48,17 @@ public class DiverScript : MonoBehaviour {
     {
         _oxygenLevel -= OxyLostPerUpdate;
         _guiScript.UpdateOxygenLevel(_oxygenLevel);
-        if (_oxygenLevel <= 0.5f) MedOxyFacialOverlay.SetActive(true);
-        if (_oxygenLevel <= 0.2f) LowOxyFacialOverlay.SetActive(true);
-        if (_oxygenLevel <= 0.1f) CriticalOxyFacialOverlay.SetActive(true);
+        if (_oxygenLevel <= 0.5f) SwitchFacialOverlay(MedOxyFacialOverlay);
+        if (_oxygenLevel <= 0.2f) SwitchFacialOverlay(LowOxyFacialOverlay);
+        if (_oxygenLevel <= 0.1f) SwitchFacialOverlay(CriticalOxyFacialOverlay);
         if (_oxygenLevel < 0) StartCoroutine(Drown());
+    }
+
+    private void SwitchFacialOverlay(GameObject overlayLayer)
+    {
+        if (overlayLayer.activeInHierarchy) return;
+        overlayLayer.SetActive(true);
+        audio.PlayOneShot(LowOxySound);
     }
 
     private IEnumerator Drown()
@@ -58,6 +67,7 @@ public class DiverScript : MonoBehaviour {
         _drowned = true;
         ResetFacialOverlays();
         _animator.SetBool("Drowned", true);
+        audio.PlayOneShot(DrownSound);
         yield return new WaitForSeconds(2);
         _rigidbody2D.gravityScale *= -1;
     }
