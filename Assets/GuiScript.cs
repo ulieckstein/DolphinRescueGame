@@ -28,9 +28,18 @@ public class GuiScript : MonoBehaviour
         Score = 0;
         UpdateScore();
         GameOverText.enabled = false;
-        GameMenuCanvas.enabled = false;
         ReturnToMenuButton.enabled = false;
         _isPaused = false;
+        GameMenuCanvas.enabled = _isPaused;
+        AudioListener.pause = _isPaused;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
+        }
     }
 
     void UpdateScore()
@@ -62,9 +71,16 @@ public class GuiScript : MonoBehaviour
 
     public void EndGame()
     {
+        SetScore();
         GameOverText.enabled = true;
         PauseButton.enabled = false; 
         StartCoroutine(EnableBackToMenuButton());
+    }
+
+    private void SetScore()
+    {
+        PlayerPrefs.SetInt("highscore", Score);
+        PlayerPrefs.Save();
     }
 
     public IEnumerator EnableBackToMenuButton()
@@ -86,8 +102,9 @@ public class GuiScript : MonoBehaviour
 
     public void PauseGame()
     {
-        Time.timeScale = _isPaused ? 1 : 0;
         _isPaused = !_isPaused;
+        Time.timeScale = _isPaused ? 0 : 1;
+        AudioListener.pause = _isPaused;
         GameMenuCanvas.enabled = _isPaused;
     }
 }

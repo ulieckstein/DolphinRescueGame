@@ -63,6 +63,7 @@
     <Compile Include="Assets\DolphinScript.cs" />
     <Compile Include="Assets\GuiScript.cs" />
     <Compile Include="Assets\LevelScript.cs" />
+    <Compile Include="Assets\MenuScript.cs" />
     <Compile Include="Assets\SeaScript.cs" />
     <Compile Include="Assets\SeabottomScript.cs" />
     <Compile Include="Assets\WaveScript.cs" />

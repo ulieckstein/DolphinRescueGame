@@ -768,6 +768,11 @@ Prefab:
       propertyPath: DrownSound
       value: 
       objectReference: {fileID: 8300000, guid: 8e332c063777a1c45901cc98591629ad, type: 3}
+    - target: {fileID: 100000, guid: 045f294d4eea03e4cae042836cb7a20b, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 266726316, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 045f294d4eea03e4cae042836cb7a20b, type: 2}
   m_RootGameObject: {fileID: 852384452}
@@ -934,7 +939,7 @@ GameObject:
   m_Layer: 8
   m_Name: Diver
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2582,7 +2587,7 @@ GameObject:
   m_Layer: 5
   m_Name: OxyBar
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
