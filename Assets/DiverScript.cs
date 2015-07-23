@@ -39,8 +39,8 @@ public class DiverScript : MonoBehaviour {
     // Update is called once per frame
 	void FixedUpdate ()
 	{
-        if (_drowned) return;
-        ListenToInput();
+	    if (_drowned) return;
+	    ListenToInput();
         ManageOxygen();
 	}
 

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -8,19 +9,28 @@ public class GuiScript : MonoBehaviour
     public Text ScoreText;
     public int Score;
     public Text GameOverText;
-    
+    public Button ReturnToMenuButton;
+
+    public Button PauseButton;
+    public Canvas GameMenuCanvas;
+
     public Image OxyBar;
     
     private Color _oxyColorFull = new Color32(167, 202, 255, 255);
     private Color _oxyColorMedium = new Color32(172, 167, 255, 255);
     private Color _oxyColorLow = new Color32(209, 152, 212, 255);
     private Color _oxyColorCritical = new Color32(225, 89, 126, 255);
-    
+
+    private bool _isPaused;
+
     void Start()
     {
         Score = 0;
         UpdateScore();
         GameOverText.enabled = false;
+        GameMenuCanvas.enabled = false;
+        ReturnToMenuButton.enabled = false;
+        _isPaused = false;
     }
 
     void UpdateScore()
@@ -47,7 +57,21 @@ public class GuiScript : MonoBehaviour
     {
         OxyBar.fillAmount = oxy;
         ColorizeOxyBar(oxy);
-        if (oxy < 0) GameOverText.enabled = true;
+        if (oxy < 0) EndGame();
+    }
+
+    public void EndGame()
+    {
+        GameOverText.enabled = true;
+        PauseButton.enabled = false; 
+        StartCoroutine(EnableBackToMenuButton());
+    }
+
+    public IEnumerator EnableBackToMenuButton()
+    {
+        if (ReturnToMenuButton.enabled) yield return null;
+        yield return new WaitForSeconds(2);
+        ReturnToMenuButton.enabled = true;
     }
 
     public void ColorizeOxyBar(float oxy)
@@ -58,5 +82,12 @@ public class GuiScript : MonoBehaviour
         if (oxy > 0.7) newColor = _oxyColorFull;
         OxyBar.color = newColor;
         //Debug.Log("Colorized Oxy Bar: " + newColor);
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = _isPaused ? 1 : 0;
+        _isPaused = !_isPaused;
+        GameMenuCanvas.enabled = _isPaused;
     }
 }
