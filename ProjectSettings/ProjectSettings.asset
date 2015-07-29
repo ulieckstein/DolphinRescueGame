@@ -67,11 +67,11 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  iPhoneBundleIdentifier: com.Eckstein.DolphinRescue
+  iPhoneBundleIdentifier: com.OnePixelDiamond.DolphinRescue
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: 73d1b6e413224964eb5cc391021c5c82
-  iPhoneBundleVersion: 1.0
+  iPhoneBundleVersion: 0.93
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -103,8 +103,8 @@ PlayerSettings:
   iPadHighResLandscapeSplashScreen: {fileID: 0}
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/uli/Documents/DolphinRescue/1pxDiamond.keystore
+  AndroidKeyaliasName: 1pxdiamond
   resolutionDialogBanner: {fileID: 0}
   m_BuildTargetIcons:
   - m_BuildTarget: 

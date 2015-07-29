@@ -4,6 +4,7 @@ using System.Collections;
 public class LevelScript : MonoBehaviour
 {
     public bool ExitOnBackButton = false;
+    public bool ReturnToMenuOnBackButton = false;
 
     public void LoadLevel(int level)
     {
@@ -16,6 +17,10 @@ public class LevelScript : MonoBehaviour
         if (ExitOnBackButton && Input.GetKeyDown(KeyCode.Escape))
         {
             ExitGame();
+        }
+        else if (ReturnToMenuOnBackButton)
+        {
+            Application.LoadLevel(0);
         }
     }
 

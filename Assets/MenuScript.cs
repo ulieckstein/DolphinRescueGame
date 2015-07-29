@@ -1,4 +1,5 @@
 ﻿using System;
+using Soomla.Store;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -8,6 +9,7 @@ public class MenuScript : MonoBehaviour
     public Text ScoreText;
     public Canvas MoreMenu;
     public Text SoundButtonText;
+    public Canvas SupporterBadge;
 
     void Start ()
     {
@@ -16,6 +18,9 @@ public class MenuScript : MonoBehaviour
         MoreMenu.enabled = false;
         AudioListener.volume = PlayerPrefs.GetFloat("volume");
         SetSoundButtonText();
+        SoomlaStore.Initialize(new MarketAssets());
+        if (StoreInventory.GetItemBalance("support_badge") > 0) SupporterBadge.enabled = true;
+        
     }
 
     public void ToggleMoreMenu()

@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3AF6F829-9ED8-C8E5-A35B-478792ED0D32}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace></RootNamespace>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>GamePlugins:3</UnityProjectType>
+    <UnityBuildTarget>Android:13</UnityBuildTarget>
+    <UnityVersion>4.6.1f1</UnityVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_4_6_1;UNITY_4_6;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_4_6_1;UNITY_4_6;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="soomla-wp-core">
+      <HintPath>Assets\Plugins\soomla-wp-core.dll</HintPath>
+    </Reference>
+    <Reference Include="wp-store">
+      <HintPath>Assets\Plugins\wp-store.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Plugins\Soomla\Core\AndroidImpl\KeyValueStorageAndroid.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\AndroidImpl\RewardStorageAndroid.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\Config\CoreSettings.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\Config\ISoomlaPostBuildTool.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\Config\ISoomlaSettings.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\Config\ObjectDictionary.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\Config\SoomlaEditorScript.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\Config\SoomlaPostBuildTools.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\Config\UnityDictionary.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\Config\android\ISoomlaManifestTools.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\Config\android\SoomlaAndroidUtil.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\Config\android\SoomlaManifestTools.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\CoreEvents.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\IOSImpl\KeyValueStorageIOS.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\IOSImpl\RewardStorageIOS.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\JSONObject.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\NullCheckable.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\Schedule.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\SoomlaEntity.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\SoomlaExtensions.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\SoomlaUtils.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\WPImpl\KeyValueStorageWP.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\WPImpl\RewardStorageWP.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\data\JSONConsts.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\data\KeyValueStorage.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\data\RewardStorage.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\rewards\BadgeReward.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\rewards\RandomReward.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\rewards\Reward.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Core\rewards\SequenceReward.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\AndroidImpl\AndroidJNIHandler.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\AndroidImpl\SoomlaStoreAndroid.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\AndroidImpl\StoreEventPusherAndroid.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\AndroidImpl\StoreInfoAndroid.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\AndroidImpl\VirtualCurrencyStorageAndroid.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\AndroidImpl\VirtualGoodsStorageAndroid.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\Config\StoreManifestTools.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\Config\StoreSettings.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\IOSImpl\IOS_ErrorCodes.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\IOSImpl\SoomlaStoreIOS.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\IOSImpl\StoreEventPusherIOS.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\IOSImpl\StoreInfoIOS.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\IOSImpl\VirtualCurrencyStorageIOS.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\IOSImpl\VirtualGoodsStorageIOS.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\IStoreAssets.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\SoomlaStore.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\StoreEvents.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\StoreInventory.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\WPImpl\SoomlaStoreWP.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\WPImpl\StoreEventPusherWP.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\WPImpl\StoreInfoWP.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\WPImpl\VirtualCurrencyStorageWP.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\WPImpl\VirtualGoodsStorageWP.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\data\StoreInfo.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\data\StoreJSONConsts.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\data\VirtualCurrencyStorage.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\data\VirtualGoodsStorage.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\data\VirtualItemStorage.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\domain\MarketItem.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\domain\PurchasableVirtualItem.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\domain\VirtualCategory.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\domain\VirtualItem.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\domain\virtualCurrencies\VirtualCurrency.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\domain\virtualCurrencies\VirtualCurrencyPack.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\domain\virtualGoods\EquippableVG.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\domain\virtualGoods\LifetimeVG.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\domain\virtualGoods\SingleUsePackVG.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\domain\virtualGoods\SingleUseVG.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\domain\virtualGoods\UpgradeVG.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\domain\virtualGoods\VirtualGood.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\exceptions\InsufficientFundsException.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\exceptions\NotEnoughGoodsException.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\exceptions\VirtualItemNotFoundException.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\purchaseTypes\PurchaseType.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\purchaseTypes\PurchaseWithMarket.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\purchaseTypes\PurchaseWithVirtualItem.cs" />
+    <Compile Include="Assets\Plugins\Soomla\Store\rewards\VirtualItemReward.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\WP8\IAPMock.xml" />
+    <None Include="Assets\Sounds\BoatFlip.txt" />
+    <None Include="Assets\Sounds\Break.txt" />
+    <None Include="Assets\Sounds\Breathe.txt" />
+    <None Include="Assets\Sounds\Cut.txt" />
+    <None Include="Assets\Sounds\HowTo.txt" />
+    <None Include="Assets\Sounds\LowOxy.txt" />
+    <None Include="Assets\Sounds\SwimUp.txt" />
+    <None Include="Assets\Sounds\SwimUp2.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
+</Project>

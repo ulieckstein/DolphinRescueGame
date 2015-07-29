@@ -1,6 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.DolphinRescue.CSharp.Plugins", "UnityVS.DolphinRescue.CSharp.Plugins.csproj", "{3AF6F829-9ED8-C8E5-A35B-478792ED0D32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.DolphinRescue.CSharp.Editor", "UnityVS.DolphinRescue.CSharp.Editor.csproj", "{106B30EB-7B5C-0ECE-0794-25BE4B046CC7}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.DolphinRescue.CSharp", "UnityVS.DolphinRescue.CSharp.csproj", "{2A5A7FF1-8A30-FA5D-D608-9362C181B849}"
 EndProject
 Global
@@ -9,6 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AF6F829-9ED8-C8E5-A35B-478792ED0D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AF6F829-9ED8-C8E5-A35B-478792ED0D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AF6F829-9ED8-C8E5-A35B-478792ED0D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AF6F829-9ED8-C8E5-A35B-478792ED0D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{106B30EB-7B5C-0ECE-0794-25BE4B046CC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{106B30EB-7B5C-0ECE-0794-25BE4B046CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{106B30EB-7B5C-0ECE-0794-25BE4B046CC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{106B30EB-7B5C-0ECE-0794-25BE4B046CC7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2A5A7FF1-8A30-FA5D-D608-9362C181B849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2A5A7FF1-8A30-FA5D-D608-9362C181B849}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A5A7FF1-8A30-FA5D-D608-9362C181B849}.Release|Any CPU.ActiveCfg = Release|Any CPU
