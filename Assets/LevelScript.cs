@@ -13,15 +13,15 @@ public class LevelScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Menu))
-        {
-            LoadLevel(2);
-        }
-
         if (ExitOnBackButton && Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Quit");
-            Application.Quit();
+            ExitGame();
         }
+    }
+
+    public void ExitGame()
+    {
+        Debug.Log("Quit");
+        Application.Quit();
     }
 }

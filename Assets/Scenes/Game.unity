@@ -1601,9 +1601,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1478435691}
-        m_MethodName: LoadLevel
-        m_Mode: 3
+      - m_Target: {fileID: 422388315}
+        m_MethodName: ReturnToMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
@@ -1795,6 +1795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb6ee4e264349464ca22a1ca7bbb6775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExitOnBackButton: 0
 --- !u!222 &1478435692
 CanvasRenderer:
   m_ObjectHideFlags: 0

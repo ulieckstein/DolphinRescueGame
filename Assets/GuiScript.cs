@@ -22,7 +22,7 @@ public class GuiScript : MonoBehaviour
     private Color _oxyColorCritical = new Color32(225, 89, 126, 255);
 
     private bool _isPaused;
-
+    
     void Start()
     {
         Score = 0;
@@ -31,7 +31,6 @@ public class GuiScript : MonoBehaviour
         ReturnToMenuButton.enabled = false;
         _isPaused = false;
         GameMenuCanvas.enabled = _isPaused;
-        AudioListener.pause = _isPaused;
     }
 
     void Update()
@@ -106,5 +105,11 @@ public class GuiScript : MonoBehaviour
         Time.timeScale = _isPaused ? 0 : 1;
         AudioListener.pause = _isPaused;
         GameMenuCanvas.enabled = _isPaused;
+    }
+
+    public void ReturnToMenu()
+    {
+        PauseGame();
+        Application.LoadLevel(0);
     }
 }
