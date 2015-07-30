@@ -18,7 +18,7 @@ public class LevelScript : MonoBehaviour
         {
             ExitGame();
         }
-        else if (ReturnToMenuOnBackButton)
+        else if (ReturnToMenuOnBackButton && Input.GetKeyDown(KeyCode.Escape))
         {
             Application.LoadLevel(0);
         }

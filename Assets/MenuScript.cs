@@ -18,9 +18,8 @@ public class MenuScript : MonoBehaviour
         MoreMenu.enabled = false;
         AudioListener.volume = PlayerPrefs.GetFloat("volume");
         SetSoundButtonText();
-        SoomlaStore.Initialize(new MarketAssets());
+        if (!SoomlaStore.Initialized) SoomlaStore.Initialize(new MarketAssets());
         if (StoreInventory.GetItemBalance("support_badge") > 0) SupporterBadge.enabled = true;
-        
     }
 
     public void ToggleMoreMenu()

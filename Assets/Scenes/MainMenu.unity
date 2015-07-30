@@ -1001,6 +1001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExitOnBackButton: 1
+  ReturnToMenuOnBackButton: 0
 --- !u!114 &543735956
 MonoBehaviour:
   m_ObjectHideFlags: 0
