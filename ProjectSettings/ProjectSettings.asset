@@ -103,7 +103,7 @@ PlayerSettings:
   iPadHighResLandscapeSplashScreen: {fileID: 0}
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  AndroidKeystoreName: C:/Users/uli/Documents/DolphinRescue/1pxDiamond.keystore
+  AndroidKeystoreName: 
   AndroidKeyaliasName: 1pxdiamond
   resolutionDialogBanner: {fileID: 0}
   m_BuildTargetIcons:

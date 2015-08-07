@@ -10,6 +10,10 @@ public class LevelScript : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         Application.LoadLevel(level);
+
+        #if !UNITY_ANDROID
+            GameObject.FindGameObjectWithTag("AndroidOnly").SetActive(false);
+        #endif
     }
 
     void Update()
